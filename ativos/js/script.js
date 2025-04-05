@@ -22,3 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
     contatoDiv.appendChild(linkWhatsApp);
     document.body.appendChild(contatoDiv);
 });
+// Adiciona direitos autorais no fim da página com ano automático
+document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.createElement("footer");
+    footer.style.textAlign = "center";
+    footer.style.padding = "10px";
+    footer.style.position = "fixed";
+    footer.style.bottom = "0";
+    footer.style.width = "100%";
+    footer.style.backgroundColor = "#f1f1f1";
+    footer.style.fontFamily = "Arial, sans-serif";
+    footer.style.fontSize = "14px";
+    footer.style.color = "#333";
+
+    const currentYear = new Date().getFullYear();
+    footer.innerText = `© ${currentYear} Todos os direitos reservados.`;
+
+    document.body.appendChild(footer);
+});
